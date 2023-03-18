@@ -1,0 +1,20 @@
+let img;
+function preload() {
+  img =
+loadImage("https://t4.ftcdn.net/jpg/01/77/47/67/360_F_177476718_VWfYMWCzK32bfPI308wZljGHvAUYSJcn.jpg")
+}
+
+function setup() {
+  createCanvas(600, 600, WEBGL);	//WEBGL을 써야 3차원을 표현하는 것이 가능하다.
+  noStroke();
+}
+
+function draw() {
+  background(255);  //background가 없으면 도형을 움직이면 잔상이 남는다.
+  rotateX(mouseY/-50);
+  rotateY(mouseX/50);
+  texture(img);
+  box(100);
+}
+
+수업시간에 배웠던 WEBGL을 통한 3D box 생성과 texture img 입히기이다.
